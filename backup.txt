@@ -1,0 +1,91 @@
+---------------"24 FEB"---------------
+
+====>>>> app.js
+
+console.log("Hello")
+var user = require('./user')
+console.log(user)
+console.log(user.userName)
+console.log(user.userAge)
+// user.userData()
+user.userData(10)
+
+====>>>> user.js
+
+console.log("User file...")
+var userName = "Ram"
+var userAge = 20
+
+// //exports
+// module.exports = userAge
+// module.exports = userName
+
+function userData(a){
+    console.log("userData function",a)
+}
+
+module.exports={
+    userAge,userName,userData
+}
+
+---------------"25 FEB"---------------
+
+//https://node5.onrender.com/user/user : domain + endpoints
+//http://localhost:3000/test
+app.get("/test",(req,res)=>{
+    console.log("test api called")
+    res.send("Test api called")
+})
+
+//http://localhost:3000/users
+app.get("/users",(req,res)=>{
+    res.json({
+        message:"User api called...",
+        data:["kashish","krishna","sneha","mahek"]
+    })
+})
+
+//http://localhost:3000/employee
+app.get("/employee",(req,res)=>{
+    res.json({
+        message:"Employee api called...",
+        data:[
+            {
+                name:"Krishna",
+                role:"Software Devloper",
+                salary:200000,
+                dept:"computer"
+            },
+            {
+                name:"Sneha",
+                role:"Ayurvedic Doc",
+                salary:100000,
+                dept:"Doctor"
+            },
+            {
+                name:"Kashish",
+                role:"Network Devloper",
+                salary:20000,
+                dept:"computer"
+            },
+            {
+                name:"Mahek",
+                role:"Software Testing",
+                salary:10000,
+                dept:"computer"
+            },
+            {
+                name:"Disha",
+                role:"AI Devloper",
+                salary:200000,
+                dept:"Data Science"
+            },
+            {
+                name:"Riddhi",
+                role:"Web Devloper",
+                salary:300000,
+                dept:"computer"
+            }
+        ]
+    })
+})
