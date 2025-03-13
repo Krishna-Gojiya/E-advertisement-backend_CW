@@ -14,7 +14,7 @@ const addArea = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -29,7 +29,7 @@ const getAllAreas = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -44,7 +44,7 @@ const getAllAreasbycityId = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }

@@ -14,7 +14,7 @@ const addCity = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -29,7 +29,7 @@ const getAllCities = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -44,7 +44,7 @@ const getAllCitiesbyStateId = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }

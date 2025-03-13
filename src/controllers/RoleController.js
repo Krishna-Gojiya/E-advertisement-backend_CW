@@ -13,7 +13,7 @@ const getAllRoles = async (req,res) => {
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -28,7 +28,7 @@ const addRole = async (req,res) =>{
     } 
     catch(err){
         res.status(500).json({
-            message: err,
+            message: err.message
         });
     }
 }
@@ -43,7 +43,7 @@ const deleteRolebyId = async(req,res) =>{
     }
     catch(err){
         res.status(500).json({
-            message:err
+            message:err.message
         })
     }
 }
@@ -58,7 +58,7 @@ const getRolebyId = async(req,res) =>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }

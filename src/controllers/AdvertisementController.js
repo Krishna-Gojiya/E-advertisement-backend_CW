@@ -14,14 +14,14 @@ const addAdvertisment = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
 
-const getAllAdvertisment = async(req,res)=>{
+const getAllAdvertisments = async(req,res)=>{
     try{
-        const showadvertisments = await advertisementModel.find().populate("stateId cityId areaId userId")
+        const showadvertisments = await advertisementModel.find().populate("stateId").populate("cityId").populate("areaId").populate("userId")
         if(showadvertisments.length === 0){
             res.status(404).json({
                 message: "No Advertisments found"
@@ -36,12 +36,12 @@ const getAllAdvertisment = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
 
-const getAllAdvertismentbyuserId = async(req,res)=>{
+const getAllAdvertismentsbyuserId = async(req,res)=>{
     try{
         const showadvertismentsbyuserId = await advertisementModel.find({userId: req.params.userId}).populate("stateId cityId areaId userId")
         if(showadvertismentsbyuserId.length === 0){
@@ -58,13 +58,13 @@ const getAllAdvertismentbyuserId = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
 
 module.exports = {
     addAdvertisment,
-    getAllAdvertisment,
-    getAllAdvertismentbyuserId
+    getAllAdvertisments,
+    getAllAdvertismentsbyuserId
 }

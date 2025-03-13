@@ -11,7 +11,7 @@ const getAllUsers = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -30,7 +30,7 @@ const signup = async(req,res) =>{
     }   
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     } 
 }
@@ -69,7 +69,7 @@ const login = async(req,res)=>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -84,7 +84,7 @@ const getUserbyId = async(req,res) =>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
@@ -99,7 +99,7 @@ const deleteUserbyId = async(req,res) =>{
     }
     catch(err){
         res.status(500).json({
-            message: err
+            message: err.message
         })
     }
 }
