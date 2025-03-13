@@ -1,4 +1,4 @@
-const hoardingModel = require("../models/HordingModel")
+const hoardingModel = require("../models/HoardingModel")
 
 //add
 //getall

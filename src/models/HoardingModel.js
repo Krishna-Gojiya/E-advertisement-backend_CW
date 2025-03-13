@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
-const hordingSchema = new Schema({
+const hoardingSchema = new Schema({
     hoardingDimension:{
         type: String,
         required: true
@@ -20,7 +20,7 @@ const hordingSchema = new Schema({
         type: Number,
         required: true
     },
-    hordingURL:{
+    hoardingURL:{
         type: String,
         required: true
     },
@@ -60,4 +60,4 @@ const hordingSchema = new Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model("hoardings",hordingSchema)
+module.exports = mongoose.model("hoardings",hoardingSchema)

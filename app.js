@@ -25,6 +25,9 @@ app.use("/city",cityRoutes)
 const areaRoutes = require("./src/routes/AreaRoutes")
 app.use("/area",areaRoutes)
 
+const hoardingRoutes = require("./src/routes/HoardingRoutes")
+app.use("/hoarding",hoardingRoutes)
+
 const advertisementRoutes = require("./src/routes/AdvertisementRoutes")
 app.use("/advertisement",advertisementRoutes)
 
