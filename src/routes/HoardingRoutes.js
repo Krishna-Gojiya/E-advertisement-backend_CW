@@ -1,5 +1,5 @@
-const routes = require("express")
-const hoardingController = require("../controllers/HordingController")
+const routes = require("express").Router()
+const hoardingController = require("../controllers/HoardingController")
 
 routes.post("/add",hoardingController.addHoarding)
 routes.get("/getall",hoardingController.getAllHoardings)

@@ -70,7 +70,7 @@ const getAllHoardingsbyuserId = async(req,res)=>{
 
 const getHoardingbyId = async(req,res)=>{
     try{
-        const showhoardingsbyId = await hoardingModel.findById(req.params.id)
+        const showhoardingsbyId = await hoardingModel.findById(req.params.id).populate("stateId cityId areaId userId")
         if(showhoardingsbyId.length === 0){
             res.status(404).json({
                 message: "Hording not found"
